@@ -2,3 +2,11 @@ server:
     build: .
     volumes:
         - .:/usr/src/app
+nginx:
+    build: ./service-nginx
+    links:
+        - server
+    ports:
+        - "4041:4041"
+    volumes:
+       - .:/www/dev/waf/
