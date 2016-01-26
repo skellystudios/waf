@@ -3,7 +3,7 @@ import * as boardActions from './actions'
 
 export function BoardController($scope, store, $timeout, uuid) {
 
-    window.socket = io('http://localhost:4042', {
+    window.socket = io('http://192.168.99.100:4042', {
         query: 'token='+localStorage.getItem('waf.token')
     });
 

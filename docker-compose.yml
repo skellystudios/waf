@@ -2,6 +2,9 @@ server:
     build: .
     volumes:
         - .:/usr/src/app
+    ports:
+        - "4042:4042"
+        - "4043:4043"
 nginx:
     build: ./service-nginx
     links:
